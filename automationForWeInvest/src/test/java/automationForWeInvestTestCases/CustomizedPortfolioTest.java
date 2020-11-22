@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import automationForWeInvestPages.AllWeatherStrategyPage;
 import automationForWeInvestPages.CustomizedPortfolioPage;
+import automationForWeInvestPages.InvestmentNowPage;
 import automationForWeInvestPages.LandingPage;
 import weInvestBase.ProjectBase;
 import weInvestUtil.TestUtil;
@@ -17,6 +18,7 @@ public class CustomizedPortfolioTest extends ProjectBase{
 	LandingPage landingPage;
 	AllWeatherStrategyPage aWPage;
 	CustomizedPortfolioPage CPPage;
+	InvestmentNowPage InvPage;
 	
 	public CustomizedPortfolioTest() {
 		super();
@@ -28,7 +30,7 @@ public class CustomizedPortfolioTest extends ProjectBase{
 		landingPage = new LandingPage();
 		aWPage = landingPage.redirectAllWeatherStrategyPage();
 		CPPage = aWPage.clickOnCustomizedProtfolioButton();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.Page_load_timeout, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_wait, TimeUnit.SECONDS);
 	}
 	
 	@Test(priority=1)
@@ -54,6 +56,11 @@ public class CustomizedPortfolioTest extends ProjectBase{
 		String updatedValue = CPPage.changeSPYValue();
 		System.out.print(updatedValue);
 		Assert.assertEquals(updatedValue, "50");
+	}
+	
+	@Test(priority=5)
+	public void redirectInvestNowPage() {
+	InvPage = CPPage.checkSPDRValueAfterClickEvent();
 	}
 	
 	

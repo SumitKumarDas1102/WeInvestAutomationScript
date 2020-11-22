@@ -33,8 +33,7 @@ public class CustomizedPortfolioPage extends ProjectBase {
 	private WebElement inVest;
 	
 	@FindBy(xpath="//div[@class='col-md-3 text-danger']//div[@class='col-md-3']")
-	private List<WebElement> investValue;
-	private WebElement getSPDRSPValue = investValue.get(0);
+	private WebElement investValue;
 	
 	public CustomizedPortfolioPage() {
 		PageFactory.initElements(driver, this);
@@ -66,9 +65,15 @@ public class CustomizedPortfolioPage extends ProjectBase {
 	    action.clickAndHold(spySlider);
 	    action.moveByOffset(50,0);
 	    action.release().build();
-	    testUtil.scrollUP(getSPDRSPValue);
-	    WebElement inVestValueElement = new WebDriverWait(driver, TestUtil.explicit_wait).until(ExpectedConditions.elementToBeClickable(getSPDRSPValue));
-	    return getSPDRSPValue.getText();
+	    testUtil.scrollUP(investValue);
+	    WebElement inVestValueElement = new WebDriverWait(driver, TestUtil.explicit_wait).until(ExpectedConditions.elementToBeClickable(investValue));
+	    return investValue.getText();
+	}
+	
+	public InvestmentNowPage checkSPDRValueAfterClickEvent() {
+		reBalance.click();
+		inVest.click();
+		return new InvestmentNowPage();		
 	}
 
 }

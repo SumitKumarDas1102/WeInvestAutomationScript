@@ -10,6 +10,7 @@
           <include name="tearDown"/>
           <include name="checkOnCustomiseClick"/>
           <include name="checkIsCustomiseButtonVisible"/>
+          <include name="redirectInvestNowPage"/>
           <include name="changeValueOfSPDRSP"/>
         </methods>
       </class> <!-- automationForWeInvestTestCases.CustomizedPortfolioTest -->
