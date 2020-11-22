@@ -1,0 +1,6 @@
+applicationUrl = https://sfo-demo.herokuapp.com/model-portfolio
+
+
+testBrowser = Chrome
+
+projectProperties = D:\QA_Work\automationWeInvest\automationForWeInvest\src\main\java\weInvestConfig\config.Properties

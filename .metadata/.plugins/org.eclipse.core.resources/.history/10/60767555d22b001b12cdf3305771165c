@@ -1,0 +1,9 @@
+package automationForWeInvestPages;
+
+import weInvestBase.ProjectBase;
+
+public class LandingPage extends ProjectBase{
+	
+	//Page Factory of Landing page:
+
+}

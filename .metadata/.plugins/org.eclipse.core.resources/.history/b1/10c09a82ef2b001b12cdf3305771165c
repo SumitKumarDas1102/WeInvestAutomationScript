@@ -1,0 +1,17 @@
+package automationForWeInvestTestCases;
+
+import automationForWeInvestPages.AllWeatherStrategyPage;
+import automationForWeInvestPages.CustomizedPortfolioPage;
+import automationForWeInvestPages.LandingPage;
+import weInvestBase.ProjectBase;
+
+public class AllWeatherStrategyTest extends ProjectBase{
+	LandingPage landingPage;
+	AllWeatherStrategyPage aWPage;
+	CustomizedPortfolioPage CPPage;
+	
+	public AllWeatherStrategyTest() {
+		super();
+	}
+
+}

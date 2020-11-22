@@ -1,0 +1,22 @@
+package automationForWeInvestPages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import weInvestBase.ProjectBase;
+
+public class LandingPage extends ProjectBase{
+	
+	//Page Factory of Landing page:
+	@FindBy(xpath="//a//img[@class='img-responsive img-smart-logo']")
+	WebElement weInvestLogo;
+	
+	@FindBy(xpath="//div//a[@data-id='79']")
+	WebElement allWeatherStrategy;
+	
+	//initialize objects
+	public LandingPage() {
+		
+	}
+
+}

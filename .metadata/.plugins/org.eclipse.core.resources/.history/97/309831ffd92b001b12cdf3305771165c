@@ -1,0 +1,20 @@
+package automationForWeInvestTestCases;
+
+import org.testng.annotations.BeforeMethod;
+
+import automationForWeInvestPages.LandingPage;
+import weInvestBase.ProjectBase;
+
+public class LandingPageTest extends ProjectBase{
+	
+	public LandingPageTest() {
+		super();
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		LandingPage landingPage = new LandingPage();
+	}
+
+}

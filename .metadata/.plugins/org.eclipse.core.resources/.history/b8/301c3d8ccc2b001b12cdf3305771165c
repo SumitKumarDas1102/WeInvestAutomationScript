@@ -1,0 +1,44 @@
+package weInvestBase;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ProjectBase {
+	static WebDriver driver;
+	static Properties prop;
+	
+	public ProjectBase() {
+		try {
+			prop = new Properties();
+			String projectPropertiesFile = prop.getProperty("projectProperties");
+			FileInputStream ip = new  FileInputStream(projectPropertiesFile);
+			prop.load(ip);
+			
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();
+		
+	} catch(IOException e) {
+		e.printStackTrace();
+		}
+	}
+	
+	
+	public static void initialization() {
+		String browserName = prop.getProperty("testBrowser");
+		String chromeDriver = prop.getProperty("chromeDriverPath");
+		if(browserName.equals("Chrome")) {
+			System.getProperty("webdriver.chrome.driver",chromeDriver);
+			driver = new ChromeDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+	}
+
+}

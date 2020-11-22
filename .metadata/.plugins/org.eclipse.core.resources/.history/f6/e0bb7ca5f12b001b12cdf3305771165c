@@ -1,0 +1,37 @@
+package automationForWeInvestTestCases;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import automationForWeInvestPages.AllWeatherStrategyPage;
+import automationForWeInvestPages.CustomizedPortfolioPage;
+import automationForWeInvestPages.LandingPage;
+import weInvestBase.ProjectBase;
+
+public class AllWeatherStrategyTest extends ProjectBase{
+	LandingPage landingPage;
+	AllWeatherStrategyPage aWPage;
+	CustomizedPortfolioPage CPPage;
+	
+	public AllWeatherStrategyTest() {
+		super();
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		landingPage = new LandingPage();
+		aWPage = landingPage.redirectAllWeatherStrategyPage();
+		
+	}
+	
+	
+	
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

@@ -1,0 +1,12 @@
+<!-- Put all the used link / path / location here. -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+applicationUrl = https://sfo-demo.herokuapp.com/model-portfolio
+
+
+testBrowser = Chrome
+
+projectProperties = D:\QA_Work\automationWeInvest\automationForWeInvest\src\main\java\weInvestConfig\config.Properties
+
+chromeDriverPath = D:\chromedriver_win32\chromedriver

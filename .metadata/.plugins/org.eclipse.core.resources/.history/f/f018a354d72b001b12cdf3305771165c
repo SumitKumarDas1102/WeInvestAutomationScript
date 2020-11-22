@@ -1,0 +1,33 @@
+package automationForWeInvestPages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import weInvestBase.ProjectBase;
+
+public class LandingPage extends ProjectBase{
+	
+	//Page Factory of Landing page:
+	@FindBy(xpath="//a//img[@class='img-responsive img-smart-logo']")
+	WebElement weInvestLogo;
+	
+	@FindBy(xpath="//div//a[@data-id='79']")
+	WebElement allWeatherStrategy;
+	
+	//initialize page objects
+	public LandingPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	//Actions
+	public String validateLandingPageTitle() {
+		return driver.getTitle();
+	}
+	
+	public boolean validateWeInvestLogo() {
+		return weInvestLogo.isDisplayed();
+	}
+
+}

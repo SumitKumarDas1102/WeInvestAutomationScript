@@ -1,0 +1,23 @@
+package automationForWeInvestPages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import weInvestBase.ProjectBase;
+
+public class AllWeatherStrategyPage extends ProjectBase{
+	
+	@FindBy(xpath = "//div[contains(@class, 'col-md-11 col-md-offset-1') and contains(., 'ALL WEATHER STRATEGY')]")
+	WebElement pageHeading;
+	
+	@FindBy(xpath="//a[contains(@class, 'btn btn-success btn-invest btn-md btn-customize-portfolio') and contains(., 'Customize Portfolio')]")
+	WebElement customizePortfolio;
+	
+	public AllWeatherStrategyPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+
+}

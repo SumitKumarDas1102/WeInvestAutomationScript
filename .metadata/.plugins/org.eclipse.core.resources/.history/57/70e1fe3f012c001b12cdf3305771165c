@@ -1,0 +1,26 @@
+package automationForWeInvestTestCases;
+
+import org.testng.annotations.BeforeMethod;
+
+import automationForWeInvestPages.AllWeatherStrategyPage;
+import automationForWeInvestPages.CustomizedPortfolioPage;
+import automationForWeInvestPages.LandingPage;
+
+public class CustomizedPortfolioTest {
+	LandingPage landingPage;
+	AllWeatherStrategyPage aWPage;
+	CustomizedPortfolioPage CPPage;
+	
+	public CustomizedPortfolioTest() {
+		super();
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		landingPage = new LandingPage();
+		aWPage = landingPage.redirectAllWeatherStrategyPage();
+		
+	}
+
+}

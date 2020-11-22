@@ -1,0 +1,52 @@
+package automationForWeInvestPages;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import weInvestBase.ProjectBase;
+import weInvestUtil.TestUtil;
+
+public class LandingPage extends ProjectBase{
+	
+	//Page Factory of Landing page:
+	@FindBy(xpath="//a//img[@class='img-responsive img-smart-logo']")
+	WebElement weInvestLogo;
+	
+	@FindBy(xpath="//div[contains(@class, 'model-portfolio-name') and contains(., 'All Weather Strategy')]")
+	WebElement allWeatherStrategyBlock;
+	
+	@FindBy(xpath="//div//a[@data-id='79']")
+	WebElement allWeatherStrategyExpandButton;
+	
+	//initialize page objects
+	public LandingPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	//Actions
+	public String validateLandingPageTitle() {
+		return driver.getTitle();
+	}
+	
+	public boolean validateWeInvestLogo() {
+		return weInvestLogo.isDisplayed();
+	}
+	
+	public boolean vlidateAllWeatherStrategy() {
+		return allWeatherStrategyBlock.isDisplayed();
+	}
+	
+	public AllWeatherStrategyPage redirectAllWeatherStrategyPage() {
+		WebElement element = new WebDriverWait(driver, TestUtil.explicit_wait).until(ExpectedConditions.elementToBeClickable(allWeatherStrategyExpandButton));
+		allWeatherStrategyExpandButton.click();
+		return new AllWeatherStrategyPage();
+	}
+	
+
+}

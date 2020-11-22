@@ -1,0 +1,4 @@
+applicationUrl = https://sfo-demo.herokuapp.com/model-portfolio
+
+
+testBrowser = Chrome

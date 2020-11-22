@@ -1,0 +1,7 @@
+package automationForWeInvestTestCases;
+
+import weInvestBase.ProjectBase;
+
+public class AllWeatherStrategyTest extends ProjectBase{
+
+}
