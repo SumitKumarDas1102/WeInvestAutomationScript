@@ -5,10 +5,12 @@
     <classes>
       <class name="automationForWeInvestTestCases.CustomizedPortfolioTest">
         <methods>
+          <include name="checkPortfolioPerformanceGraph"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="checkOnCustomiseClick"/>
           <include name="checkIsCustomiseButtonVisible"/>
+          <include name="changeValueOfSPDRSP"/>
         </methods>
       </class> <!-- automationForWeInvestTestCases.CustomizedPortfolioTest -->
     </classes>

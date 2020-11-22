@@ -1,0 +1,44 @@
+package automationForWeInvestPages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import weInvestBase.ProjectBase;
+import weInvestUtil.TestUtil;
+
+public class CustomizedPortfolioPage extends ProjectBase {
+	
+	@FindBy(xpath="//div[contains(@class, 'panel-heading') and contains(., 'Portfolio Performance')]")
+	private WebElement portfolioPerformanceGraph;
+	
+	@FindBy(xpath="//div//a[contains(@class, 'model-portfolio-btn btn btn-dange btn-black btn-md invest pull-right') and contains(., 'Customise')]")
+	private WebElement customizeButton;
+	
+	@FindBy(xpath="//input [@data-isin='SPY']")
+	private WebElement spySlider;
+	
+	public CustomizedPortfolioPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public boolean isGraphDisplay() {
+		WebElement element = new WebDriverWait(driver, TestUtil.explicit_wait).until(ExpectedConditions.elementToBeClickable(customizeButton));
+		return portfolioPerformanceGraph.isDisplayed();
+	}
+	
+	public boolean isCustomiseButtonVisible() {
+		WebElement element = new WebDriverWait(driver, TestUtil.explicit_wait).until(ExpectedConditions.elementToBeClickable(customizeButton));
+		return customizeButton.isDisplayed();	
+	}
+	
+	public boolean onCustomiseClick() {
+		WebElement element = new WebDriverWait(driver, TestUtil.explicit_wait).until(ExpectedConditions.elementToBeClickable(customizeButton));
+		customizeButton.click();
+       return spySlider.isEnabled(); 		
+		
+	}
+
+}

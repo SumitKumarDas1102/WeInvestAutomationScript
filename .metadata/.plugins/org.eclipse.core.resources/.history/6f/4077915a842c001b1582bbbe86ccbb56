@@ -1,0 +1,16 @@
+package weInvestUtil;
+
+import weInvestBase.ProjectBase;
+
+public class TestUtil extends ProjectBase{
+	
+	public static long Page_load_timeout = 60;
+	public static long implicit_wait = 50;
+	public static long explicit_wait = 60;
+	
+	
+	public void switchToFrame() {
+		driver.switchTo().frame("indx");
+	}
+
+}

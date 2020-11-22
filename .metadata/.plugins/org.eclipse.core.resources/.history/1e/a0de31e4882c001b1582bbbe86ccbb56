@@ -1,0 +1,24 @@
+package weInvestUtil;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import weInvestBase.ProjectBase;
+
+public class TestUtil extends ProjectBase{
+	
+	public static long Page_load_timeout = 80;
+	public static long implicit_wait = 50;
+	public static long explicit_wait = 80;
+	
+	
+	public void switchToFrame() {
+		driver.switchTo().frame("indx");
+	}
+	
+	public void scrollDown(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
+	}
+
+}

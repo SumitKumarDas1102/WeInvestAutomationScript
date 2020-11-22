@@ -1,5 +1,7 @@
 package automationForWeInvestTestCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -9,6 +11,7 @@ import automationForWeInvestPages.AllWeatherStrategyPage;
 import automationForWeInvestPages.CustomizedPortfolioPage;
 import automationForWeInvestPages.LandingPage;
 import weInvestBase.ProjectBase;
+import weInvestUtil.TestUtil;
 
 public class CustomizedPortfolioTest extends ProjectBase{
 	LandingPage landingPage;
@@ -25,6 +28,7 @@ public class CustomizedPortfolioTest extends ProjectBase{
 		landingPage = new LandingPage();
 		aWPage = landingPage.redirectAllWeatherStrategyPage();
 		CPPage = aWPage.clickOnCustomizedProtfolioButton();
+		driver.manage().timeouts().pageLoadTimeout(TestUtil.Page_load_timeout, TimeUnit.SECONDS);
 	}
 	
 	@Test(priority=1)
@@ -43,6 +47,13 @@ public class CustomizedPortfolioTest extends ProjectBase{
 	public void checkOnCustomiseClick() {
 		boolean flag = CPPage.onCustomiseClick();	
 		Assert.assertTrue(flag, "Edit Section is enable for editing");
+	}
+	
+	@Test(priority=4)
+	public void changeValueOfSPDRSP() {
+		String updatedValue = CPPage.changeSPYValue();
+		System.out.print(updatedValue);
+		Assert.assertEquals(updatedValue, "50");
 	}
 	
 	
