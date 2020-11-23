@@ -3,6 +3,11 @@
 <suite name="WeInvest Application Test Automation Test Suite">
 
 
+<listeners>  
+<listener class-name="ExtentReportListener.ExtentReportListener"/>  
+</listeners>
+
+
 	<test name="WeInvest Test Cases">
 		<classes>
 			<class name="automationForWeInvestTestCases.LandingPageTest"></class>
