@@ -22,6 +22,8 @@
 		<item key="create_unimplemented" value="true"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item key="size.x" value="843"/>
+		<item key="size.y" value="399"/>
 	</section>
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="600"/>
