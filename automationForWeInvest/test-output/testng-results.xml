@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27971" started-at="2020-11-22T10:07:40Z" finished-at="2020-11-22T10:08:08Z">
+  <suite name="WeInvest Application Test Automation Test Suite" duration-ms="137425" started-at="2020-11-23T08:45:57Z" finished-at="2020-11-23T08:48:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27971" started-at="2020-11-22T10:07:40Z" finished-at="2020-11-22T10:08:08Z">
-      <class name="automationForWeInvestTestCases.CustomizedPortfolioTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:automationForWeInvestTestCases.CustomizedPortfolioTest@25d250c6]" name="setup" is-config="true" duration-ms="25775" started-at="2020-11-22T10:07:40Z" finished-at="2020-11-22T10:08:06Z">
+    <test name="WeInvest Test Cases" duration-ms="137425" started-at="2020-11-23T08:45:57Z" finished-at="2020-11-23T08:48:14Z">
+      <class name="automationForWeInvestTestCases.AllWeatherStrategyTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:automationForWeInvestTestCases.AllWeatherStrategyTest@6a41eaa2]" name="setup" is-config="true" duration-ms="17339" started-at="2020-11-23T08:47:08Z" finished-at="2020-11-23T08:47:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="redirectInvestNowPage()[pri:5, instance:automationForWeInvestTestCases.CustomizedPortfolioTest@25d250c6]" name="redirectInvestNowPage" duration-ms="1499" started-at="2020-11-22T10:08:06Z" finished-at="2020-11-22T10:08:07Z">
+        <test-method status="PASS" signature="checkAllWeatherStrategyHeading()[pri:1, instance:automationForWeInvestTestCases.AllWeatherStrategyTest@6a41eaa2]" name="checkAllWeatherStrategyHeading" duration-ms="141" started-at="2020-11-23T08:47:25Z" finished-at="2020-11-23T08:47:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- redirectInvestNowPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automationForWeInvestTestCases.CustomizedPortfolioTest@25d250c6]" name="tearDown" is-config="true" duration-ms="675" started-at="2020-11-22T10:08:07Z" finished-at="2020-11-22T10:08:08Z">
+        </test-method> <!-- checkAllWeatherStrategyHeading -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automationForWeInvestTestCases.AllWeatherStrategyTest@6a41eaa2]" name="tearDown" is-config="true" duration-ms="711" started-at="2020-11-23T08:47:26Z" finished-at="2020-11-23T08:47:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automationForWeInvestTestCases.AllWeatherStrategyTest -->
+      <class name="automationForWeInvestTestCases.LandingPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:automationForWeInvestTestCases.LandingPageTest@685cb137]" name="setup" is-config="true" duration-ms="70581" started-at="2020-11-23T08:45:57Z" finished-at="2020-11-23T08:47:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="landingPageTitleTest()[pri:1, instance:automationForWeInvestTestCases.LandingPageTest@685cb137]" name="landingPageTitleTest" duration-ms="32" started-at="2020-11-23T08:47:07Z" finished-at="2020-11-23T08:47:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- landingPageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automationForWeInvestTestCases.LandingPageTest@685cb137]" name="tearDown" is-config="true" duration-ms="659" started-at="2020-11-23T08:47:07Z" finished-at="2020-11-23T08:47:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automationForWeInvestTestCases.LandingPageTest -->
+      <class name="automationForWeInvestTestCases.CustomizedPortfolioTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:automationForWeInvestTestCases.CustomizedPortfolioTest@7cd62f43]" name="setup" is-config="true" duration-ms="46666" started-at="2020-11-23T08:47:26Z" finished-at="2020-11-23T08:48:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkPortfolioPerformanceGraph()[pri:1, instance:automationForWeInvestTestCases.CustomizedPortfolioTest@7cd62f43]" name="checkPortfolioPerformanceGraph" duration-ms="222" started-at="2020-11-23T08:48:13Z" finished-at="2020-11-23T08:48:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPortfolioPerformanceGraph -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automationForWeInvestTestCases.CustomizedPortfolioTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="1039" started-at="2020-11-23T08:48:13Z" finished-at="2020-11-23T08:48:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- automationForWeInvestTestCases.CustomizedPortfolioTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- WeInvest Test Cases -->
+  </suite> <!-- WeInvest Application Test Automation Test Suite -->
 </testng-results>
