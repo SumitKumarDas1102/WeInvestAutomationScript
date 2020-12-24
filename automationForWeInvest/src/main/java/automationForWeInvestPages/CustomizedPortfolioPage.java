@@ -35,6 +35,12 @@ public class CustomizedPortfolioPage extends ProjectBase {
 	@FindBy(xpath="//div[@class='col-md-3 text-danger']//div[@class='col-md-3']")
 	private WebElement investValue;
 	
+	
+	
+	
+	
+	
+	
 	public CustomizedPortfolioPage() {
 		PageFactory.initElements(driver, this);
 		testUtil = new TestUtil();
